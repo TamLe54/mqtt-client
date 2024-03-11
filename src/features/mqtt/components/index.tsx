@@ -81,8 +81,9 @@ const HookMqtt = () => {
   const mqttPublish = (context: TConnectClient) => {
     if (client) {
       // topic, QoS & payload for publishing message
-      const { topic, qos, payload } = context
-      client.publish(topic, payload, { qos }, (error) => {
+      const { topic, qos, payload, retain } = context
+      console.log(retain)
+      client.publish(topic, payload, { qos, retain }, (error) => {
         if (error) {
           console.log('Publish error: ', error)
         }

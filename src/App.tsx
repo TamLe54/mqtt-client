@@ -1,8 +1,8 @@
 import './App.css'
-import { ChatLayout } from './features/chat/components'
+import HookMqtt from './features/mqtt/components'
 
 function App() {
-  return <ChatLayout />
+  return <HookMqtt />
 }
 
 export default App

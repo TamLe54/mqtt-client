@@ -1,4 +1,4 @@
-import { Button, Card, Col, Form, Input, Row, Select } from 'antd'
+import { Button, Card, Checkbox, Col, Form, Input, Row, Select } from 'antd'
 import { useContext } from 'react'
 import { TConnectClient } from '../types'
 import { QosOption } from './index'
@@ -38,6 +38,13 @@ const Publisher = ({ publish }: TPublisher) => {
         <Col span={12}>
           <Form.Item label='QoS' name='qos'>
             <Select options={qosOptions} />
+          </Form.Item>
+
+          <Form.Item
+            label='Retain Mesage'
+            name='retain'
+            valuePropName='checked'>
+            <Checkbox />
           </Form.Item>
         </Col>
         <Col span={24}>

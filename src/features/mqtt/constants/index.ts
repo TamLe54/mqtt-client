@@ -29,4 +29,5 @@ export const initialConnectionOptions: IClientOptions = {
    */
   username: 'emqx_test',
   password: 'emqx_test',
+
 }
